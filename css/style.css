@@ -19,4 +19,31 @@
     outline: none;
 }
 
-
+/* navbar styles */
+.app{
+    background-color: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 70%;
+    max-width: 700px;
+    justify-content:space-between;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    font-size: 1rem;
+}
+.logo{
+    width: 300px;
+    height: 20px;
+    object-fit: contain;
+}

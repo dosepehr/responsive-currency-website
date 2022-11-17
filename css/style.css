@@ -35,7 +35,7 @@ nav {
     padding: 20px;
 }
 
-nav ul {
+nav .main {
     list-style: none;
     display: flex;
     width: 70%;
@@ -43,22 +43,29 @@ nav ul {
     justify-content: space-between;
 }
 
-nav ul li a {
+nav .main li a {
     text-decoration: none;
     color: #000;
     font-weight: 600;
+    transition: all 0.3s ease;
     font-size: 1rem;
+}
+
+nav .main li a:hover {
+    color: var(--main-yellow);
 }
 
 .logo {
     width: 300px;
     height: 20px;
     object-fit: contain;
+    cursor: pointer;
 }
 
 /* ham menu */
 .ham {
     height: 30px;
+    cursor: pointer;
 }
 
 .ham span {
@@ -70,33 +77,81 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-.ham.open span:nth-child(1) {
+.ham:hover span {
+    background-color: var(--main-yellow);
+}
+
+.ham.active span:nth-child(1) {
     background-color: var(--main-yellow);
     transform: rotate(-45deg) translateY(5.5px);
     transform-origin: center
 }
 
-.ham.open span:nth-child(2) {
+.ham.active span:nth-child(2) {
     display: none;
 }
 
-.ham.open span:nth-child(3) {
+.ham.active span:nth-child(3) {
     background-color: var(--main-yellow);
     transform: rotate(45deg) translateY(-5.5px);
     transform-origin: center
+}
+
+.menu {
+    width: 100%;
+    height: 0;
+    list-style: none;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    border-right: 3px solid var(--main-yellow);
+    border-left: 3px solid var(--main-yellow);
+}
+
+.menu.open {
+    height: 120px;
+    visibility: visible;
+
+}
+
+.menu a {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+.menu a:hover {
+    color: var(--main-yellow);
 }
 
 /* media queries */
 
 
 @media screen and (max-width: 992px) {
-    nav ul {
+    nav .main {
         display: none;
     }
+
 }
 
 @media screen and (min-width: 992px) {
     .ham {
+        display: none;
+    }
+
+    .menu {
         display: none;
     }
 }

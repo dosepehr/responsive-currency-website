@@ -12,6 +12,10 @@
     font-display: swap;
 }
 
+:root {
+    --main-yellow: #F9B500;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -20,30 +24,79 @@
 }
 
 /* navbar styles */
-.app{
+.app {
     background-color: #fff;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
-nav ul{
+
+nav ul {
     list-style: none;
     display: flex;
     width: 70%;
     max-width: 700px;
-    justify-content:space-between;
+    justify-content: space-between;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: #000;
     font-weight: 600;
     font-size: 1rem;
 }
-.logo{
+
+.logo {
     width: 300px;
     height: 20px;
     object-fit: contain;
+}
+
+/* ham menu */
+.ham {
+    height: 30px;
+}
+
+.ham span {
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    display: block;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.ham.open span:nth-child(1) {
+    background-color: var(--main-yellow);
+    transform: rotate(-45deg) translateY(5.5px);
+    transform-origin: center
+}
+
+.ham.open span:nth-child(2) {
+    display: none;
+}
+
+.ham.open span:nth-child(3) {
+    background-color: var(--main-yellow);
+    transform: rotate(45deg) translateY(-5.5px);
+    transform-origin: center
+}
+
+/* media queries */
+
+
+@media screen and (max-width: 992px) {
+    nav ul {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .ham {
+        display: none;
+    }
 }

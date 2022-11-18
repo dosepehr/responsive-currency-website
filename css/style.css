@@ -136,6 +136,45 @@ nav .main li a:hover {
     color: var(--main-yellow);
 }
 
+/* intro section */
+
+
+.big-news {
+    height: 400px;
+}
+
+.small-news {
+    height: 188px;
+
+}
+
+.big-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-news img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* media queries */
 
 

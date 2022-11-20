@@ -317,15 +317,44 @@ nav .main li a:hover {
     object-fit: cover;
 }
 
+/* prices */
+.prices {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-yellow);
+    margin-bottom: 1px;
+    padding: 15px;
+    font-weight: 700;
+    color: #000;
+    font-size: 14px;
+}
+
+
+
+
+
+
 /* media queries */
 
 
 @media screen and (max-width: 992px) {
     nav .main {
         display: none;
+
     }
 
+    .prices {
+        margin-top: 30vh;
+    }
 }
+
+
 
 @media screen and (min-width: 992px) {
     .ham {
@@ -345,16 +374,20 @@ nav .main li a:hover {
     .article-detail>span {
         font-size: 0.8rem;
     }
+    .prices{
+        margin-top: 18vh;
+    }
 }
 
 
 @media screen and (max-width: 576px) {
-    .firstNews{
+    .firstNews {
         margin-bottom: 15vh;
     }
 }
+
 @media screen and (max-width: 406px) {
-    .firstNews{
+    .firstNews {
         margin-bottom: 18vh;
     }
 }

@@ -14,6 +14,7 @@
 
 :root {
     --main-yellow: #F9B500;
+    --main-gray: #ccc;
 }
 
 * {
@@ -173,7 +174,7 @@ nav .main li a:hover {
 /* news */
 /* FIXME : fix the overlay css  */
 .overlay {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: #00000066;
     position: relative;
     top: -100%;
     left: 0;
@@ -256,7 +257,7 @@ nav .main li a:hover {
     left: 0;
     width: 100%;
     height: 1px;
-    background: #ccc;
+    background: var(--main-gray);
 }
 
 .article-img {
@@ -354,10 +355,12 @@ nav .main li a:hover {
     color: #515151;
     margin-bottom: 30px;
 }
+
 .emailBox {
     display: flex;
     justify-content: center;
 }
+
 .emailBox input {
     background-color: #fff;
     border: 1px solid var(--main-yellow);
@@ -365,7 +368,8 @@ nav .main li a:hover {
     width: 80%;
     margin-top: 20px;
 }
-.emailBox button{
+
+.emailBox button {
     background-color: var(--main-yellow);
     border: none;
     padding: 5px;
@@ -373,10 +377,131 @@ nav .main li a:hover {
     margin-top: 20px;
     color: #000;
 }
-.emailBox input::placeholder{
+
+.emailBox input::placeholder {
     color: #777777;
     font-size: 15px;
 }
+
+/* footer */
+footer {
+    background-color: #191919;
+    padding: 30px;
+    margin-top: 20vh;
+
+}
+
+footer .container {
+    z-index: 999;
+    position: relative;
+}
+
+.img-container {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #191919e6;
+    z-index: 1;
+}
+
+
+.logo-footer {
+    margin-bottom: 20px;
+}
+
+.p-footer {
+    color: var(--main-gray);
+    line-height: 28px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.title-footer {
+    color: var(--main-yellow);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer-news {
+    color: var(--main-gray);
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.footer-news:hover {
+    color: var(--main-yellow);
+}
+
+.footer-date {
+    color: var(--main-gray);
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+footer hr {
+    color: var(--main-gray);
+}
+
+.last {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    /* flex-wrap: nowrap; */
+}
+
+
+
+.terms {
+    width: 80%;
+}
+
+.terms a {
+    color: var(--main-gray);
+    font-size: 13px;
+    transition: all .3s ease;
+    width: 25%;
+}
+
+.terms a:hover {
+    color: var(--main-yellow);
+}
+
+.icons {
+    display: flex;
+    text-align: center;
+}
+
+.icons a {
+    font-size: 14px;
+    color: #333;
+    width: min-content
+}
+
+
+
+
+
+
+
+
+
+
 
 /* media queries */
 

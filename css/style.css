@@ -1,12 +1,12 @@
 /* defaults */
 
 @font-face {
-    font-family: 'A Iranian Sans';
-    src: url('../fonts/iransans/AIranianSans.eot');
-    src: url('../fonts/iransans/AIranianSans.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/iransans/AIranianSans.woff2') format('woff2'),
-        url('../fonts/iransans/AIranianSans.woff') format('woff'),
-        url('../fonts/iransans/AIranianSans.ttf') format('truetype');
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins/Poppins-Regular.eot');
+    src: url('../fonts/Poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Poppins/Poppins-Regular.woff') format('woff'),
+        url('../fonts/Poppins/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins/Poppins-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     outline: none;
+    font-family: Poppins;
 }
 
 a {
@@ -538,7 +539,7 @@ footer hr {
     .big-news {
         height: 400px;
     }
-    
+
     .small-news {
         height: 400px;
     }
